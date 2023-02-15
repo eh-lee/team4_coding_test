@@ -86,10 +86,10 @@ let data = "3 5";
 const n = data.split(" ");
 const a = Number(n[0]), b = Number(n[1]);
 let star = "";
-for (i=0; i<a; i++){
-    star += "*";
-} for (j=0; j<b; j++){
-    console.log(star); //>> 5 * "***"
-};
+    for (i=0; i<a; i++){
+        star += "*";
+    } for (j=0; j<b; j++){
+        console.log(star); //>> 5 * "***"
+    };
 
 //끝!

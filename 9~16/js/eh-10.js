@@ -121,8 +121,8 @@
 // let arr2 = [[3,4,1], [4,5,1]];
 // var answer = [[], []];
    
-//     for(i=0; i<arr1.length; i++){
-//         for(j=0; j<arr1[i].length; j++){
+//     for(let i=0; i<arr1.length; i++){
+//         for(let j=0; j<arr1[i].length; j++){
 //             answer[i][j] = arr1[i][j] + arr2[i][j] 
 //         }
 //     }
@@ -133,12 +133,13 @@
 
 //최종2
 //코드는 맞는데 런타임에서 에러
-
 function solution(arr1, arr2) {
     var answer = [[], []]; //    var answer = [[]];  //이것도 런타임 에러
-    for(i=0; i<arr1.length; i++){
-        for(j=0; j<arr1[i].length; j++)
+
+    for(let i=0; i<arr1.length; i++){
+        for(let j=0; j<arr1[i].length; j++){
             answer[i][j] = arr1[i][j] + arr2[i][j] 
+        }
     }
     return answer;
 }
