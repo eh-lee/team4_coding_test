@@ -1,3 +1,6 @@
+//https://school.programmers.co.kr/learn/courses/30/lessons/12912
+//두 정수 사이의 합
+
 
 // //logic 1 .splice() 메서드 이용 => 실패..
 // //두 정수를 하나의 배열로 묶고 그다음 오름차순으로 배열해야겠네유
