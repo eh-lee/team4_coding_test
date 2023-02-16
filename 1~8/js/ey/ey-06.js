@@ -13,9 +13,9 @@ function solution(numbers) {
 // 검색 후 includes를 알게 됨...
 function solution(numbers) {
     var answer = 0;
-    
+
     for (let i=0; i<=9; i++) {
-        if(numbers.includes(i) == false) {
+        if(numbers.includes(i) === false) {
             answer += i
         }
     }
