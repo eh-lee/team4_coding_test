@@ -13,6 +13,7 @@ function solution(numbers) {
 // 검색 후 includes를 알게 됨...
 function solution(numbers) {
     var answer = 0;
+    
     for (let i=0; i<=9; i++) {
         if(numbers.includes(i) == false) {
             answer += i
@@ -20,7 +21,7 @@ function solution(numbers) {
     }
     return answer;
 }
-// if문 더 잘 이해하기!!
+// if문 더 잘 이해하기!! >> return
 
 
 // reduce() 찾아보기!

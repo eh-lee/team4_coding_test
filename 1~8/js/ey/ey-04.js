@@ -16,6 +16,7 @@ function solution(a, b) {
     return answer;
 }
 
+// Math.min / Math.max
 
 /* 
 // Math.abs로 푸는 방법은 없나....?

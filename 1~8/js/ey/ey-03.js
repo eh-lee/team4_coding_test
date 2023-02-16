@@ -1,5 +1,9 @@
 // 가운데 글자 가져오기 (https://programmers.co.kr/learn/courses/30/lessons/12903)
 
+//.substring()
+//(https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/substring)
+
+
 function solution(s) {
     let slg = s.length;
     let cut = Math.floor(slg/2);
