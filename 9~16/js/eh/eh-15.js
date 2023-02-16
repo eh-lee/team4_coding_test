@@ -49,3 +49,8 @@ function solution(a, b) {
     answer = sum;
     return answer;
 }
+
+
+
+
+//.reduce() 메서드에 대해 공부하기!
