@@ -12,12 +12,21 @@ s	return
 
 function solution(s) {
       
-    if (s.length % 2 != 0){
-        let b = s[Math.floor(s.length / 2)];
+    if (s.length % 2 != 0){  // 배열 길이 / 2 가  0이 아닐 때!
+        let b = s[Math.floor(s.length / 2)];  //길이 5/2= 2.5 버림으로 2  (c)
         var answer = b;
     } else {
-        let b = s[Math.floor(s.length / 2 - 1)] + s[Math.floor(s.length / 2)];
+        let b = s[Math.floor(s.length / 2 - 1)] + s[Math.floor(s.length / 2)];  //길이 4/2=2 (e)   2-1=1 (w) => (w)+(e)
         var answer = b;
     }
     return answer;
 }
+
+
+Math.floor() : 소수점 이하를 버림한다.
+console.log(Math.floor(5.95));
+// Expected output: 5
+console.log(Math.floor(-5.05));
+// Expected output: -6
+Math.ceil() : 소수점 이하를 올림한다.
+Math.round() : 소수점 이하를 반올림한다.
