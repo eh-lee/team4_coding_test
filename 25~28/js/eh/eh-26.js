@@ -79,32 +79,48 @@
 //답은 내림차순 정렬이 아니여..
 
 
+// function solution(arr){
+//     let min = [];
+//     let index = 0;
+//     if(arr.length === 1){
+//         return [-1];
+//     }
+//     min = arr.indexOf(Math.min(...arr));
+//     // console.log(min);
+//     index = arr.splice(min, 1);
+//     console.log(index); //[min]
+
+//     arr = arr.filter(function(item){
+//         return item !== index
+//     });
+//     console.log(arr);
+    
+// }
+
+
+
+//최종
+
 function solution(arr){
     let min = [];
     let index = 0;
+    
     if(arr.length === 1){
         return [-1];
     }
+    
     min = arr.indexOf(Math.min(...arr));
-    // console.log(min);
     index = arr.splice(min, 1);
-    console.log(index); //[min]
+
 
     arr = arr.filter(function(item){
         return item !== index
     });
-    console.log(arr);
-
-    
+    return answer = arr;
 }
 
-
-
-// function solution(arr){
-//     if(arr.length === 1){
-//         return [-1];
-//     }
-//     console.log(Math.min(...arr));
-//     console.log(arr.indexOf(Math.min(...arr)));
-//     console.log(arr.indexOf(Math.min(...arr)), 1);
-// }
+//배운 것 
+// arr = arr.filter(function(item){
+//     return item !== index
+// });
+//array 에서 "index"라는 값 제거하기.
