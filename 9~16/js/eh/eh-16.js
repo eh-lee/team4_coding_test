@@ -65,12 +65,12 @@
 
 
 
-let str = "ktekekktkekkk"
-console.log(str.split(/k/gi)); //>['', '', 'eete'] // 찾은 값을 공백으로 전환하고 나머지를 하나의 인덱스에 묶음
-console.log(str.split(/k/gi).length); //>3
+// let str = "ktekekktkekkk"
+// console.log(str.split(/k/gi)); //>['', '', 'eete'] // 찾은 값을 공백으로 전환하고 나머지를 하나의 인덱스에 묶음
+// console.log(str.split(/k/gi).length); //>3
 
-console.log(str.match(/k/gi)); //>2 ['k', 'k'] 
-console.log(str.match(/k/gi).length); //>2
+// console.log(str.match(/k/gi)); //>2 ['k', 'k'] 
+// console.log(str.match(/k/gi).length); //>2
 
 // if (str.split(/p/gi).length === str.split(/y/gi).length ? answer = true : answer = false);
 // console.log(answer);

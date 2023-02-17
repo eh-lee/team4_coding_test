@@ -34,7 +34,7 @@
 
 // let n = 3
 // let m = 3
-// let stars = "*".repeat(n);
+// let stars = "*".repeat(n); //***
 // // console.log(stars); //>*** //이 코드를 m번 반복하면 됨. 반복? => for
 // for (i=0; i<m; i++){
 //     console.log(stars);
@@ -82,14 +82,82 @@
 
 //2-3
 //지금 풀이한 for구문을 좀 더 깔끔하게 해 보면?
-let data = "3 5";
-const n = data.split(" ");
-const a = Number(n[0]), b = Number(n[1]);
-let star = "";
-    for (i=0; i<a; i++){
-        star += "*";
-    } for (j=0; j<b; j++){
-        console.log(star); //>> 5 * "***"
-    };
+// let data = "3 5";
+// const n = data.split(" ");
+// const a = Number(n[0]), b = Number(n[1]);
+// let star = "";
+//     for (i=0; i<a; i++){
+//         star += "*";
+//     } for (j=0; j<b; j++){
+//         console.log(star); //>> 5 * "***"
+//     };
 
 //끝!
+
+
+
+
+
+//--REVIEW-😭
+
+// //init code
+// process.stdin.setEncoding('utf8');
+// process.stdin.on('data', data => {
+//     const n = data.split(" ");
+//     const a = Number(n[0]), b = Number(n[1]);
+//     console.log(a);
+//     console.log(b);
+// });
+
+
+//1
+//예시의 값 넣어서 init code 이해하기
+
+// let data = "5 3"
+
+// process.stdin.setEncoding('utf8');
+// process.stdin.on('data', data => {
+    // const n = data.split(" ");
+    // console.log(n);
+    // const a = Number(n[0]), b = Number(n[1]);
+    // console.log(a); //>3
+    // console.log(b); //>5
+    // console.log(typeof(a)); //>number
+
+
+//2
+//주어진 숫자만큼 문자 "*"를 만들기 -> for statement
+
+// let data = "5 3"
+// const n = data.split(" ");
+// console.log(n); //> ['5', '3']
+// const a = Number(n[0]), b = Number(n[1]); //Number()? 검색. 문자열을 숫자로 변환하는 메서드.
+// //a = 5, b = 3
+// let star = ""; // star string 선언할 건데, 아직 그 string에 해당하는 내용은 없다.
+
+// for(let i=0; i<a; i++){
+//     star += "*"; // star = star + "*";
+//     } for (let j=0; j<b; j++){
+//         console.log(star);
+// }
+
+
+
+// for(let i = 0; i<a; i++){
+//     //for문을 활용해서 star를 만들어야 함 -> star를 선언(빈 string으로)
+//     star += "*"; 
+//     // console.log(star);
+//     } for (let j = 0; j<b; j++){
+//         star; //이때의 star는 뭘까요?
+//         console.log(star); //>3 *****
+//         }
+// console.log(star); // 두 번째 for문의 밖으로 나왔기 떄문에 >*****
+
+// // //끝!
+
+
+
+
+
+
+
