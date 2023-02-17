@@ -21,6 +21,7 @@ function solution(numbers) {
     }
     return answer;
 }
+
 // if문 더 잘 이해하기!! >> return
 
 
@@ -29,3 +30,21 @@ function solution(numbers) {
 function solution(numbers) {
     return 45 - numbers.reduce((cur, acc) => cur + acc, 0);
 } */
+
+
+//새로운 도전 
+/* 
+function solution(numbers) {
+    var answer = 0;    
+    
+    let num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    
+    let noNum = num.filter(x => !numbers.includes(x));
+    
+    for (let i = 0; i < noNum.length; i++) {
+        answer = answer + noNum[i];   
+    }
+
+    return answer;
+} 
+*/

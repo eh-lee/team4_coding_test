@@ -42,7 +42,8 @@ function solution(array, height) {
 시행착오들
 1. allOf = array.push(hgight); 라고 했더니 콘솔을 찍어봤을 때 5가 나왔다.
 1-1. height를 바로 넣으면 안 되는 건가 하는 생각에, height도 배열로봐야하나 싶어서
-1-2. concat으로 해봄. 그렇게 콘솔에 찍어보니까 잘 들어가서
+1-2. concat으로 해봄. 그렇게 콘솔에 찍어보니까 잘 들어가서 height가 배열인가 했더니 아니었음.
+2. push와 sort의 차이
 
 
 
@@ -50,4 +51,16 @@ function solution(array, height) {
 
 
 sort 쓸 때 a,b 자리에 매개변수를 넣어도 되나?
+
  */
+
+function solution(array, height) {
+    var answer = 0;
+    
+    array.push(height);
+    
+    answer = array.sort(function(a, b) {
+        return b - a;
+    });
+    return answer.indexOf(height);
+}
