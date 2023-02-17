@@ -45,3 +45,107 @@ let month = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
 
 //일단 패스..
+
+
+// ---------------------------------------------------
+//230217 re
+//이중 for문으로 i에서 Month j에서 day?
+//마지막에 반환할 때 number Or number-1이 arr[i]겠네
+
+//1/1 금  day[5]
+//1/2 토 day[6]
+//1/3 일 day[0]
+//1/4 월 day[1]
+
+
+// let day = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+// let month = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+// if a=5 -> 
+
+
+
+
+// function solution(a, b) {
+//     var answer = '';
+//     let count = 0;
+
+//     let month = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+//     let day = ['FRI', 'SAT', 'SUN', 'MON', 'TUE', 'WED', 'THU'];
+//     //1월1일은 금요일
+
+//     for (let i = 0; i<a-1; i++){
+//         count += month[i]
+//         console.log(count);
+//         //31 + 30 + 31 + 30 =121  4월 말일까지 다 가면 이거죵
+//         //1이 금이지? 그러면 121을 7로 나눠서 어쩌구 하면 그게 121일째인 날, 그러니까 5월1일이든
+//         //4월 30일이든 정확히는 모르겠지만 그날의 day도 %7 이용해서 구할 수 있겠쥬?
+//         //그치만 며칠인지도 더해야 4/30인지 5/1인지의 요일이 아니라 5월 0+b일이 먼지도 알겠죠?
+//         //그래서 84라인 
+//     }
+//     count = count + b;
+//     console.log(count); //> 121(4월까지 꽉)+24(일)) = 145
+
+//     let filDate = count % 7;
+//     console.log(filDate); //>5네요 그러면 이게 day[5]로 가겠쥬? wed나왔는데 5/24는 tue니까
+//                             // [filDate-1]로 교정해 줍시다 90라인
+//     answer = day[filDate-1];
+//     console.log(answer); //> TUE 끝.
+
+//     return answer;
+// }
+
+
+
+
+//1차
+//에러 (5, 26) undefined
+//(2, 25) (3,24)
+//3,3 3,10 3,17 3,24
+//7 공차로 오키오키 하나가 비네
+
+// function solution(a, b) {
+//     var answer = '';
+//     let count = -1; //아 b의 최솟값이 1이니까 count -1 해도 0번 인덱스.
+//                     //1/1은 그때부터 0번인덱스부터 시작해야지
+
+//     let month = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+//     let day = ['FRI', 'SAT', 'SUN', 'MON', 'TUE', 'WED', 'THU'];
+//     //1월1일은 금요일
+
+//     for (let i = 0; i<a-1; i++){
+//         count += month[i]
+//         console.log(count);
+//     }
+//     count = count + b
+//     console.log(count);
+
+//     let filDate = count % 7;
+//     console.log(filDate); //>5네요 그러면 이게 day[5]로 가겠쥬? wed나왔는데 5/24는 tue니까
+//                             // [filDate-1]로 교정해 줍시다 90라인
+//     console.log(filDate);//> 0이 나오네 아  //[filDate-1] -1 없애기로 수정 131라인
+//     answer = day[filDate];
+//     console.log(answer);
+
+//     return answer;
+// }
+
+
+
+//최종
+function solution(a, b) {
+    var answer = '';
+    let count = -1;
+    let month = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    let day = ['FRI', 'SAT', 'SUN', 'MON', 'TUE', 'WED', 'THU'];
+
+    for (let i = 0; i<a-1; i++){
+        count += month[i]
+    }
+    count = count + b
+
+    let filDate = count % 7;
+    answer = day[filDate];
+
+    return answer;
+}

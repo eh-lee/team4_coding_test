@@ -1,5 +1,6 @@
 //https://school.programmers.co.kr/learn/courses/30/lessons/12935
 //제일 작은 수 제거하기
+//**
 
 //arr = [4, 3, 2, 1]
 //그냥 이거 내림차순이든 오름차순이든 해서 reduce로 인덱스 지정해서
