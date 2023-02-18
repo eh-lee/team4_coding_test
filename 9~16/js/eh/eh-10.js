@@ -133,12 +133,31 @@
 
 //최종2
 //코드는 맞는데 런타임에서 에러
-function solution(arr1, arr2) {
-    var answer = [[], []]; //    var answer = [[]];  //이것도 런타임 에러
+// function solution(arr1, arr2) {
+//     var answer = [[], []]; //    var answer = [[]];  //이것도 런타임 에러
 
-    for(let i=0; i<arr1.length; i++){
-        for(let j=0; j<arr1[i].length; j++){
-            answer[i][j] = arr1[i][j] + arr2[i][j] 
+//     for(let i=0; i<arr1.length; i++){
+//         for(let j=0; j<arr1[i].length; j++){
+//             answer[i][j] = arr1[i][j] + arr2[i][j] 
+//         }
+//     }
+//     return answer;
+// }
+
+//원인: [[],[]] [[],[]] 이거랑
+//[[ , ], [ , ]] [[ , ], [ , ]] 이거만 되지
+//[[],[],[]] [[],[],[]] 이상은 안 됨
+//왜? 자리를 고정해 놔서
+//그러니까 미리 방을 파 주자
+
+
+function solution(arr1, arr2) {
+    var answer = [[]];
+    for (var i=0; i<arr1.length; i++){
+        answer[i] =[]; //1차 방 파 주기
+        console.log(answer);
+        for(var j=0; j<arr1[i].length; j++){
+            answer[i].push(arr1[i][j] + arr2[i][j]);
         }
     }
     return answer;

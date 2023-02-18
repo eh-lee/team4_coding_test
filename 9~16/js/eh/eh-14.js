@@ -71,9 +71,10 @@ function solution(arr, divisor) {
         if(arr[i]%divisor == 0 ? answer.push(arr[i]) : null ){
         } 
     }
-    answer = answer.sort(function(a, b)  {return a - b;});
+    // answer = answer.sort(function(a, b)  {return a - b;});
+    answer = answer.sort((a,b) => a - b);
     
-    if(answer.length == 0){
+    if(answer.length === 0){
         answer.push(-1);
     }
     

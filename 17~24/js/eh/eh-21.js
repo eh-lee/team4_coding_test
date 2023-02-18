@@ -127,9 +127,11 @@
 
 
 
-//최종
-// let sArr = s.split(" ");
-// console.log(sArr); //>['aa', 'aaa', 'aa']
+// //최종
+// // let sArr = s.split(" ");
+// // console.log(sArr); //>['aa', 'aaa', 'aa']
+
+
 
 function solution(s){
     let answer ="";
@@ -143,10 +145,7 @@ function solution(s){
                 answer += sArr[i][j].toLowerCase();
             }
         }
-        if (i<sArr.length-1){ //아직 이 공백 넣는 게 정확히 이해가 안 되네
-            //j=sArr[i].length-1이렇게 넣는 건 내가 만든 건데
-            //그러면 맨 뒤에도 추가 돼서
-            
+        if (i<sArr.length-1){ //
             //첫 번째 i포문이 첫 번째 j포문을 다 돌리고 i조건식이 끝나기 직전에
             //한 번 들어가서 공백을 남기는 것!
             //-1하는 이유는 맨 마지막 i 돌릴 때는 문자열 뒤에 공백 만들면 안 되기 때문
@@ -158,4 +157,6 @@ function solution(s){
     }
     return answer;
 }
+
+
 

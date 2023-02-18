@@ -57,3 +57,4 @@ function solution(n) {
     answer = Number(str);
     return answer;
 }
+

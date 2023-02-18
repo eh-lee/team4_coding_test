@@ -102,26 +102,97 @@
 
 //최종
 
-function solution(arr){
-    let min = [];
-    let index = 0;
+// function solution(arr){
+//     let min = [];
+//     let index = 0;
     
-    if(arr.length === 1){
-        return [-1];
-    }
+//     if(arr.length === 1){
+//         return [-1];
+//     }
     
-    min = arr.indexOf(Math.min(...arr));
-    index = arr.splice(min, 1);
+//     min = arr.indexOf(Math.min(...arr));
+//     index = arr.splice(min, 1);
 
 
-    arr = arr.filter(function(item){
-        return item !== index
-    });
-    return answer = arr;
-}
+//     arr = arr.filter(function(item){
+//         return item !== index
+//     });
+//     return answer = arr;
+// }
 
 //배운 것 
 // arr = arr.filter(function(item){
 //     return item !== index
 // });
 //array 에서 "index"라는 값 제거하기.
+
+
+// let arr = [5, 3, 8, 6, 10, 1];
+// let x = [];
+// console.log(Math.min(...arr));
+// x= arr.indexOf(Math.min(...arr));
+// console.log(x);
+
+
+
+//최종 2
+
+// function solution(arr) {
+//     var answer = [];
+//     console.log(...arr);
+//     let min = Math.min(...arr);
+
+//     if (arr.length ===1) {
+//         return[-1];
+//     }
+
+//     for(let i = 0; i < arr.length; ++i){
+//         if(arr[i] != min) {
+//             answer.push(arr[i]);  
+//         }
+//     }
+//     return answer;
+// }
+
+//...arr spread syntax
+
+
+
+
+//재혁 님이랑 페어
+// let answer = [];
+// let arr = [4, 3, 2, 1];
+
+// answer.push(arr[0]);
+// console.log(answer);
+// answer.push(arr[1]);
+// console.log(answer);
+// answer.push(arr[2]);
+// console.log(answer);
+
+
+function solution(arr){
+    var answer = [];
+    let arrMin = Math.min(...arr);
+    // console.log(arrMin);
+    
+
+    if (arr.length === 1) {
+        answer = [-1];
+        return answer;
+    }
+
+    // console.log(arr);
+    for ( let i = 0; i < arr.length; i++){ // 0 1 2 3
+        if(arr[i] !== arrMin){ //4 !== 1 3 !== 1 ...
+        answer.push(arr[i]); //answer = [4] answer = [4, 3]..
+            // console.log(answer);
+        }
+        // console.log(answer);
+    }
+    return answer;
+
+}
+    
+
+
