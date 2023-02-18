@@ -7,7 +7,7 @@
 
 
 function solution(absolutes, signs) {
-    var answer = 0 +4 -7 +12
+    var answer
     
     for (let i = 0; i < signs.length; i++) {
         if(signs[i] === true) {
