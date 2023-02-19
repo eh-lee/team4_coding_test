@@ -49,25 +49,119 @@
 // //    return num > 1;
 // //   }
 
+// //내일 다시
+// s="2 3 4 5";
+// let arrNum = s.split(" ");
+// console.log(arrNum);
+// console.log(Number(arrNum[0]));
+// let x = [];
 
-s="2 3 4 5";
-let arrNum = s.split(" ");
-console.log(arrNum);
-console.log(Number(arrNum[0]));
-let x = [];
+// function solution(){
 
-for(let n = 0; n<arrNum.length; n++) { //i = 0 i<4 i++
-    const isPrime = (n) => {
-        for (let i = 1; i < Number(arrNum[i]); i++) {
-            if (Number(arrNum[i]) % i === 0) {
-                console.log(x);
-                x += Number(arrNum[i])
-                console.log(x);
-            }
-            console.log(x);
+// }
+
+
+
+// for(let n = 0; n<arrNum.length; n++) { //i = 0 i<4 i++
+//         for (let i = 1; i < Number(arrNum[i]); i++) {
+//             if (Number.isInteger(arrNum[i])) {
+//                 x += Number(arrNum[i])
+//                 console.log(x);
+//             }
+//             console.log(x);
+//         }
+//         console.log(x);
+//     }
+//     console.log(x);
+//     // return true;
+
+// //소수 구한 것들 빼서 배열 푸쉬 만들고
+// //else 는 다른 변수에 담고
+// //arrElse -> Math.min(a,b)
+// //arrPrime -> Math.max(a,b)
+// //answer = 
+
+
+// let s="2 3 4 5";
+// let arrNum = s.split(" ");
+// let arrPrime = [];
+// let maxPrime = 0;
+// let arrRest = [];
+// let minRest = 0;
+// let answer = "";
+
+
+
+// function solution (s){
+//     let arrNum = s.split(" ");
+//     let arrPrime = [];
+//     let maxPrime = 0;
+//     let arrRest = [];
+//     let minRest = 0;
+//     let answer = "";
+
+//     function isPrimeNumber(n){
+//         if(n==1) return false;
+//         for(let i=2; i<n; i++){
+//             if(n%i==0) return false;
+//         }
+//         return true;
+//     }
+
+//     for(let i = 0; i<arrNum.length; i++) {
+//         if (isPrimeNumber(arrNum[i]) === true){
+//             arrPrime.push(Number(arrNum[i]));
+//             console.log(arrPrime); //> [2, 3, 5]
+//             console.log(typeof(arrPrime[0])); //> num
+//             maxPrime = Math.max(...arrPrime);
+//             console.log(maxPrime); //> 3
+//         } else {
+//             arrRest.push(Number(arrNum[i])); // [4]
+//             console.log(arrRest);
+//             minRest = Math.min(...arrRest);
+//             console.log(minRest); //> 4
+//             console.log(typeof(minRest)); //> num
+//         }
+//         answer = minRest + " " + maxPrime;
+//         console.log(answer);
+//         console.log(typeof(answer));
+//     }
+//     return answer;
+// }
+
+
+//최종
+
+
+function solution (s){
+    let arrNum = s.split(" ");
+    let arrPrime = [];
+    let maxPrime = 0;
+    let arrRest = [];
+    let minRest = 0;
+    let answer = "";
+
+    function isPrimeNumber(n){
+        if(n==1) return false;
+        for(let i=2; i<n; i++){
+            if(n%i==0) return false;
         }
-        console.log(x);
+        return true;
     }
-    console.log(x);
-    // return true;
+
+    for(let i = 0; i<arrNum.length; i++) {
+        if (isPrimeNumber(arrNum[i]) === true){
+            arrPrime.push(Number(arrNum[i]));
+            maxPrime = Math.max(...arrPrime);
+        } else {
+            arrRest.push(Number(arrNum[i]));
+            minRest = Math.min(...arrRest);
+        }
+        answer = minRest + " " + maxPrime;
+    }
+
+    return answer;
 }
+let s ="97 75 88 99 95 92 73";
+
+console.log(solution(s));
