@@ -56,3 +56,18 @@ function hide_numbers(s){
     return result;
   }
  */
+
+// 두번째 풀기
+
+function solution(phone_number) {
+    var answer = '';
+    let num = '';
+    let star = '';
+    
+    num = phone_number.slice(-4);
+    star = '*'.repeat(phone_number.length - 4)
+    
+    answer = star + num
+    
+    return answer;
+}

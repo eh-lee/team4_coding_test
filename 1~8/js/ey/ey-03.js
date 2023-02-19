@@ -15,3 +15,17 @@ function solution(s) {
     return solution;
 }
 
+// 두번째 풀이 
+
+function solution(s) {
+    var answer = '';
+    let lgth = Math.floor(s.length/2);
+    
+    if (s.length%2===0) {
+        answer = s.substring(lgth-1, lgth+1);
+    } else {
+        answer = s.substring(lgth, lgth+1);
+    }
+    return answer;
+}
+

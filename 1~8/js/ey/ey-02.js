@@ -14,3 +14,6 @@ function solution(num) {
 // function solution(num) { 
 //     return num % 2 === 0? "Even" : "Odd"; 
 // }
+
+// 여기서 ===0은 없어도 되겠다. 어차피 나머지가 0이면 truely니까!
+// 근데 걍 적는게 더 안전한 듯. 알아보기도 쉽고!

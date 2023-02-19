@@ -11,7 +11,7 @@ function solution(absolutes, signs) {
     
     for (let i = 0; i < signs.length; i++) {
         if(signs[i] === true) {
-            answer + answer + absolutes[i];
+            answer = answer + absolutes[i];
         } else {
             answer = answer - absolutes[i];
         }
@@ -27,3 +27,17 @@ function solution(absolutes, signs) {
     return absolutes.reduce((acc, val, i) => acc + (val * (signs[i] ? 1 : -1)), 0);
 } 
 */
+
+//두번째 풀었을 때
+function solution(absolutes, signs) {
+    var answer = 0;
+    
+    for (let i=0; i<signs.length; i++) {
+        if (signs[i]) {
+            answer += absolutes[i];
+        } else {
+            answer -= absolutes[i];
+        }
+    }
+    return answer;
+}

@@ -11,6 +11,7 @@ function solution(numbers) {
 
 
 // 검색 후 includes를 알게 됨...
+/* 
 function solution(numbers) {
     var answer = 0;
 
@@ -21,6 +22,8 @@ function solution(numbers) {
     }
     return answer;
 }
+ */
+
 
 // if문 더 잘 이해하기!! >> return
 
@@ -33,7 +36,6 @@ function solution(numbers) {
 
 
 //새로운 도전 
-/* 
 function solution(numbers) {
     var answer = 0;    
     
@@ -47,4 +49,18 @@ function solution(numbers) {
 
     return answer;
 } 
-*/
+
+
+// 다른 방법 도전
+function solution(numbers) {
+    var answer = 0;
+    let sum = 0;
+        
+    for (let i=0; i<numbers.length; i++) {
+        sum += numbers[i];
+    }
+    
+    answer = 45-sum;
+        
+    return answer;
+}
