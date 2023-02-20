@@ -139,16 +139,16 @@
 
 // // //최종
 
-// // function solution(a, b) {
-// //     let arr = [a, b];
-// //     let sortArr = arr.sort()
-// //     let answer = 0;
+function solution(a, b) {
+    let arr = [a, b];
+    let sortArr = arr.sort()
+    let answer = 0;
     
-// //     for (i=sortArr[0]; i<=sortArr[1]; i++){
-// //         answer = answer + i;
-// //     }
-// //     return answer;
-// // }
+    for (i=sortArr[0]; i<=sortArr[1]; i++){
+        answer = answer + i;
+    }
+    return answer;
+}
 
 
 

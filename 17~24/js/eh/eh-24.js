@@ -54,7 +54,6 @@ function solution(n) {
     for(let i = 0; i<arr.length; i++){
         str += Number(arr[i]);    
     }
-    answer = Number(str);
-    return answer;
+    return answer = Number(str);
 }
 

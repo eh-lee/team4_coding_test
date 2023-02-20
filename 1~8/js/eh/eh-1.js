@@ -143,14 +143,14 @@
 
 
 
-// for(let i = 0; i<a; i++){
-//     //for문을 활용해서 star를 만들어야 함 -> star를 선언(빈 string으로)
-//     star += "*"; 
-//     // console.log(star);
-//     } for (let j = 0; j<b; j++){
-//         star; //이때의 star는 뭘까요?
-//         console.log(star); //>3 *****
-//         }
+for(let i = 0; i<a; i++){
+    //for문을 활용해서 star를 만들어야 함 -> star를 선언(빈 string으로)
+    star += "*"; 
+    // console.log(star);
+    } for (let j = 0; j<b; j++){
+        star; //이때의 star는 뭘까요?
+        console.log(star); //>3 *****
+        }
 // console.log(star); // 두 번째 for문의 밖으로 나왔기 떄문에 >*****
 
 // // //끝!

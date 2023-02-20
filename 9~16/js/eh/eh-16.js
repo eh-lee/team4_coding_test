@@ -104,11 +104,11 @@ function solution(s){
     //ex) solution("pooY") > ['', 'ooY']  ['poo', ''] | p랑 Y는 하나(1)인데 렝스는 2
 
 
-    //.split 메서드는 오퍼레이터가 되는 문자열이 없더라도, 없는 것을 기준으로 그대로 배열로
-    //반환하기 때문에 min length가 1이다. 그러나
-    //.match 메서드는 null이 나온다.
-    //그래서 아무리 .match의 len을 받아 와도 null이 출력된다.
-    //&& .match 메서드는 boolean이다.
+    // .split 메서드는 오퍼레이터가 되는 문자열이 없더라도, 없는 것을 기준으로 그대로 배열로
+    // 반환하기 때문에 min length가 1이다. 그러나
+    // .match 메서드는 null이 나온다.
+    // 그래서 아무리 .match의 len을 받아 와도 null이 출력된다.
+    // && .match 메서드는 boolean이다.
 }
 
 

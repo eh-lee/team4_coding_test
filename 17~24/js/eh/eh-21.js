@@ -137,11 +137,11 @@ function solution(s){
     let answer ="";
     let sArr = s.split(" ");
 
-    for (let i = 0; i<sArr.length; i++){
-        for (let j=0; j<sArr[i].length; j++){
-            if (j%2===0){
+    for (let i = 0; i<sArr.length; i++){ //1차 배열 방 열기
+        for (let j=0; j<sArr[i].length; j++){ //2차 배열 방 열기
+            if (j%2===0){ //2차 배열 방 인덱스 채우기
                 answer += sArr[i][j].toUpperCase();
-            } else {
+            } else { //2차 배열 방 인덱스 채우기
                 answer += sArr[i][j].toLowerCase();
             }
         }
@@ -150,6 +150,9 @@ function solution(s){
             //한 번 들어가서 공백을 남기는 것!
             //-1하는 이유는 맨 마지막 i 돌릴 때는 문자열 뒤에 공백 만들면 안 되기 때문
             
+            //i=0일 때, 그러니까 sArr[1]이 돌 때, sArr[1][0~n]이 다 돌고
+            //위에 이프엘스문 빠져 나오면, 여기서 검사 돌리니까 마지막 i빼고는 다 해당되겠쥬?
+            //그래서 사이에 + " " 들어가겠쥬?!!!! !!
             
 
             answer += ' ';
