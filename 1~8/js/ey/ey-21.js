@@ -19,6 +19,7 @@ function solution(s) {
     }
     return sArr.join(' ');
 }
+
 /* 
     function toWeirdCase(s){
         var str = '';
