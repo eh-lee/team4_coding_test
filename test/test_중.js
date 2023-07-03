@@ -104,12 +104,18 @@
 
 
 //최종
+let str="OXOOOXXXOXOOXOOOOOXO";
+console.log(solution(str));
 
 function solution(str){
-    let strWithoutX = str.replace(/X/g, " ");
-    let newArr = strWithoutX.split(" ");
-    let answer = 0;
 
+    let strWithoutX = str.replace(/X/g, " "); // 
+    let newArr = strWithoutX.split(" ");
+    // console.log(newArr);
+    let answer = 0;
+    // console.log(str.split("X")); 이걸로 한 번에..
+    console.log(newArr);
+    
     function sum(n){
         let result = 0;
         for(let i = 0; i<=n; i++){
@@ -117,11 +123,28 @@ function solution(str){
         }
         return result;
     }
-  
+    
     for(let i = 0 ; i<newArr.length; i++){
         answer += sum(newArr[i].length);
     }
-return answer;
+    
+
+    return answer;
 }
-let str="OXOOOXXXOXOOXOOOOOXO";
-console.log(solution(str));
+
+
+
+//은영 님 풀이
+
+// function solution(str){
+//     let answer = 0;
+//     let array= (str.split("X")).filter(a=> a!=='');
+//     array.map( b => answer += (b.length)/2*(b.length+1) )
+    
+//     return answer;
+//     }
+    
+//     let str="OXOOOXXXOXOOXOOOOOXO";
+//     console.log(solution(str))
+
+
